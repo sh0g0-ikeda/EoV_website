@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edge of Vision | 宇宙発想のAIプロダクトハブ</title>
+  <meta
+    name="description"
+    content="Edge of Visionは、個人の能力の限界をAI技術を用いて出来る限り拡張し、個人が言語性知能や特定の技能の有無に制約されない社会を目指します。"
+  >
+  <link rel="icon" href="pictures/logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-language="ja">
+  <div class="starfield starfield--far" data-stars="80" data-speed="0.12"></div>
+  <div class="starfield starfield--mid" data-stars="60" data-speed="0.2"></div>
+  <div class="starfield starfield--near" data-stars="36" data-speed="0.3"></div>
+
+  <div class="site-chrome"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand-mark" href="#home" aria-label="Edge of Vision home">
+      <img src="pictures/logo.png" alt="Edge of Vision logo">
+    </a>
+
+    <div class="header-actions">
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="#home" data-i18n="navHome">ホーム</a>
+        <a href="#products" data-i18n="navProducts">プロダクト</a>
+        <a href="#projects" data-i18n="navProjects">プロジェクト</a>
+        <a href="#about" data-i18n="navAbout">概要</a>
+        <a href="#contact" data-i18n="navContact">連絡先</a>
+      </nav>
+
+      <button
+        class="language-switch"
+        type="button"
+        data-lang-toggle
+        aria-label="Switch site language to English"
+        title="Switch site language to English"
+      >
+        ENG
+      </button>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="ナビゲーションを開閉"
+        data-i18n-aria="navToggleLabel"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero reveal" id="home">
+      <div class="hero__background" aria-hidden="true">
+        <img src="pictures/back.png" alt="">
+      </div>
+
+      <div class="hero__content">
+        <img
+          class="hero__wordmark"
+          src="pictures/text_yellow.png"
+          alt="Edge of Vision"
+        >
+        <p class="hero__lede" data-i18n="heroLede">AIで人の能力の限界を打ち壊す。</p>
+        <p class="hero__copy" data-i18n="heroCopy">
+          Edge of Visionは、個人の能力の限界をAI技術を用いて出来る限り拡張し、個人が言語性知能や特定の技能の有無に制約されない社会を目指します。
+        </p>
+
+        <div class="hero__actions">
+          <a class="button button--primary" href="https://the-council-mu.vercel.app/" data-i18n="heroPrimaryCta">プロダクトを見る</a>
+          <a class="button button--secondary" href="#projects" data-i18n="heroSecondaryCta">プロジェクトを見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="vision reveal" id="vision">
+      <div class="section-heading">
+        <p class="section-kicker" data-i18n="visionKicker">思想</p>
+        <h2 data-i18n="visionHeading">AIは人間の知性を置き換えない。</h2>
+      </div>
+
+      <div class="vision__panel">
+        <p class="vision__quote" data-i18n="visionQuote">それを拡張するための道具である。</p>
+        <p class="vision__body" data-i18n="visionBody">
+          Edge of Visionは、AIを個人の能力を押し広げるための実用的な技術として扱います。
+          言語性知能や専門技能の差によって可能性が閉じない社会を目指します。
+        </p>
+      </div>
+    </section>
+
+    <section class="products reveal" id="products">
+      <div class="products__intro">
+        <div class="section-heading">
+          <p class="section-kicker" data-i18n="productsKicker">プロダクト</p>
+          <h2 data-i18n="productsHeading">限界を拡張するプロダクト群。</h2>
+        </div>
+
+        <a class="products__launch" href="#product-grid" aria-label="Jump to product list">
+          <span data-i18n="productsLaunch">プロダクト一覧へ</span>
+        </a>
+      </div>
+
+      <div class="product-grid" id="product-grid">
+        <article class="product-card">
+          <span class="product-card__status" data-i18n="product1Status">運用中</span>
+          <h3 data-i18n="product1Title">Tradog</h3>
+          <p data-i18n="product1Body">
+            株、投資信託、仮想通貨、貴金属など様々な種類の資産を一括でアラート管理できるツールです。
+          </p>
+          <ul class="product-card__tags" aria-label="Tradog highlights">
+            <li data-i18n="product1Tag1">株</li>
+            <li data-i18n="product1Tag2">投資信託</li>
+            <li data-i18n="product1Tag3">仮想通貨・貴金属</li>
+          </ul>
+          <a class="product-card__link" href="#cta" data-i18n="productLink">詳細ページを準備中</a>
+        </article>
+
+        <article class="product-card">
+          <span class="product-card__status" data-i18n="product2Status">クリエイティブ基盤</span>
+          <h3 data-i18n="product2Title">Lyra</h3>
+          <p data-i18n="product2Body">
+            発想、場面設計、スタイル調整、ストーリーボード化までを支えるAIマンガ制作ワークフローです。
+          </p>
+          <ul class="product-card__tags" aria-label="Lyra highlights">
+            <li data-i18n="product2Tag1">マンガ生成</li>
+            <li data-i18n="product2Tag2">構成支援</li>
+            <li data-i18n="product2Tag3">スタイル制御</li>
+          </ul>
+          <a class="product-card__link" href="#cta" data-i18n="productLink">詳細ページを準備中</a>
+        </article>
+
+        <article class="product-card">
+          <span class="product-card__status" data-i18n="product3Status">構想中</span>
+          <h3 data-i18n="product3Title">The Council</h3>
+          <p data-i18n="product3Body">
+            歴史上の人物や今を時めく著名人をAIエージェントとして議論させる掲示板型SNS。
+          </p>
+          <ul class="product-card__tags" aria-label="The Council highlights">
+            <li data-i18n="product3Tag1">歴史人物AI</li>
+            <li data-i18n="product3Tag2">SNS</li>
+            <li data-i18n="product3Tag3">対話体験</li>
+          </ul>
+          <a class="product-card__link" href="#cta" data-i18n="product3Link">構想を追う</a>
+        </article>
+
+        <article class="product-card">
+          <span class="product-card__status" data-i18n="product4Status">Solomon</span>
+          <h3 data-i18n="product4Title">Vibe Coding Competition</h3>
+          <p data-i18n="product4Body">
+            バイブコーディング専用のプログラミングコンペ。AIと人の即興的な開発感覚を競技として成立させます。
+          </p>
+          <ul class="product-card__tags" aria-label="Vibe Coding Competition highlights">
+            <li data-i18n="product4Tag1">バイブコーディング</li>
+            <li data-i18n="product4Tag2">プログラミングコンペ</li>
+            <li data-i18n="product4Tag3">即興開発</li>
+          </ul>
+          <a class="product-card__link" href="#cta" data-i18n="product4Link">企画を見る</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="projects reveal" id="projects">
+      <div class="section-heading">
+        <p class="section-kicker" data-i18n="projectsKicker">プロジェクト</p>
+        <h2 data-i18n="projectsHeading">単純作業に特化した極小AIエージェント。</h2>
+      </div>
+
+      <div class="project-grid project-grid--single">
+        <article class="project-card">
+          <h3 data-i18n="project1Title">極小AIエージェント</h3>
+          <p data-i18n="project1Body">
+            単純作業だけに特化し、実用性の境界を極小のコストで動かすものとして設計・検証しています。
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta reveal" id="cta">
+      <div class="cta__panel">
+        <h2 data-i18n="ctaHeading">私たちの仕事を見る。</h2>
+        <p data-i18n="ctaBody">
+          プロダクト一覧と進行中のプロジェクトを見ることで、Edge of Visionがどこへ向かっているかを掴めます。
+        </p>
+        <div class="cta__actions">
+          <a class="button button--primary" href="#products" data-i18n="ctaPrimary">プロダクトハブを開く</a>
+          <a class="button button--secondary" href="#projects" data-i18n="ctaSecondary">プロジェクトを見る</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer reveal">
+    <div class="footer-brand" id="about">
+      <img class="footer-brand__wordmark" src="pictures/text_yellow.png" alt="Edge of Vision">
+    </div>
+
+    <div class="footer-column">
+      <h3 data-i18n="footerDirectoryTitle">サイト</h3>
+      <a href="#products" data-i18n="navProducts">プロダクト</a>
+      <a href="#projects" data-i18n="navProjects">プロジェクト</a>
+      <a href="#vision" data-i18n="footerVisionLink">思想</a>
+    </div>
+
+    <div class="footer-column" id="contact">
+      <h3 data-i18n="footerContactTitle">連絡先</h3>
+      <a href="mailto:edge.of.vision.official@gmail.com">edge.of.vision.official@gmail.com</a>
+      <a href="#top" data-i18n="footerBackTop">上に戻る</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
