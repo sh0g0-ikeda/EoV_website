@@ -52,7 +52,7 @@ const translations = {
     product3Tag1: "歴史人物AI",
     product3Tag2: "SNS",
     product3Tag3: "対話体験",
-    product3Link: "構想を追う",
+    product3Link: "使ってみる",
     productLink: "詳細ページを準備中",
     ctaHeading: "私たちの仕事を見る。",
     ctaBody:
@@ -108,7 +108,7 @@ const translations = {
     product3Tag1: "Historical AI",
     product3Tag2: "Social network",
     product3Tag3: "Dialogue systems",
-    product3Link: "Follow the concept",
+    product3Link: "Try it",
     productLink: "Product page coming soon",
     ctaHeading: "Explore our work.",
     ctaBody:
