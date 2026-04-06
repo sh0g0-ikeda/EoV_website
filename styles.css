@@ -117,7 +117,6 @@ main,
 .vision,
 .products,
 .technology,
-.projects,
 .cta,
 .site-footer {
   width: var(--content-width);
@@ -476,7 +475,6 @@ body[data-language="en"] .hero__lede {
 .vision__panel,
 .product-card,
 .tech-panel,
-.project-card,
 .cta__panel,
 .footer-brand,
 .footer-column {
@@ -496,7 +494,6 @@ body[data-language="en"] .hero__lede {
 .vision__panel::before,
 .product-card::before,
 .tech-panel::before,
-.project-card::before,
 .cta__panel::before,
 .footer-brand::before,
 .footer-column::before {
@@ -525,7 +522,6 @@ body[data-language="en"] .hero__lede {
 .signal-card strong,
 .product-card h3,
 .tech-panel h3,
-.project-card h3,
 .footer-column h3 {
   display: block;
   margin-bottom: 10px;
@@ -547,7 +543,6 @@ body[data-language="en"] .hero__lede {
 .vision__body,
 .product-card p,
 .tech-panel p,
-.project-card p,
 .cta__panel p,
 .footer-brand p,
 .footer-note {
@@ -648,14 +643,13 @@ body[data-language="en"] .hero__lede {
 }
 
 .product-grid,
-.project-grid,
 .site-footer {
   display: grid;
   gap: 22px;
 }
 
 .product-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 26px;
   max-width: 1080px;
   margin: 0 auto;
@@ -815,30 +809,10 @@ body[data-language="en"] .hero__lede {
 }
 
 .tech-panel,
-.project-card,
 .footer-column,
 .footer-brand,
 .cta__panel {
   padding: 28px;
-}
-
-.project-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.project-grid--single {
-  grid-template-columns: 1fr;
-  max-width: 820px;
-  margin: 0 auto;
-}
-
-.project-grid--single .project-card {
-  text-align: center;
-}
-
-.project-grid--single .project-card p {
-  max-width: 54ch;
-  margin: 0 auto;
 }
 
 .vision .section-heading h2 {
@@ -848,26 +822,6 @@ body[data-language="en"] .hero__lede {
 
 .products .section-heading h2 {
   max-width: 18ch;
-}
-
-.projects .section-heading h2 {
-  max-width: 22ch;
-  font-size: clamp(1.35rem, 3.6vw, 3.1rem);
-}
-
-.projects {
-  padding-top: 116px;
-}
-
-.projects .section-heading {
-  margin: 0 auto 28px;
-}
-
-.project-card {
-  min-height: 220px;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent),
-    linear-gradient(135deg, rgba(4, 8, 16, 0.94), rgba(8, 14, 27, 0.78));
 }
 
 .cta {
@@ -973,8 +927,7 @@ body[data-language="ja"] .products__launch span {
 @media (max-width: 1024px) {
   .section-heading--split,
   .technology__layout,
-  .site-footer,
-  .project-grid {
+  .site-footer {
     grid-template-columns: 1fr;
   }
 
@@ -1110,14 +1063,8 @@ body[data-language="ja"] .products__launch span {
     font-size: clamp(1rem, 4.35vw, 1.22rem);
   }
 
-  .projects .section-heading h2 {
-    max-width: 20ch;
-    font-size: clamp(1.05rem, 5vw, 1.45rem);
-  }
-
   .vision__panel,
   .tech-panel,
-  .project-card,
   .cta__panel,
   .footer-brand,
   .footer-column,
