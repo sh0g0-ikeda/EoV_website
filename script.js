@@ -8,7 +8,7 @@ const descriptionMeta = document.querySelector('meta[name="description"]');
 
 const translations = {
   ja: {
-    title: "Edge of Vision | 宇宙発想のAIプロダクトハブ",
+    title: "Edge of Vision",
     description:
       "Edge of Visionは、個人の能力の限界をAI技術を用いて出来る限り拡張し、個人が言語性知能や特定の技能の有無に制約されない社会を目指します。",
     languageToggle: "ENG",
@@ -64,7 +64,7 @@ const translations = {
     footerBackTop: "上に戻る",
   },
   en: {
-    title: "Edge of Vision | Cosmic AI Product Hub",
+    title: "Edge of Vision",
     description:
       "Edge of Vision aims to extend the limits of individual capability with AI and build a society where people are not constrained by verbal intelligence or specific technical skills.",
     languageToggle: "JP",
