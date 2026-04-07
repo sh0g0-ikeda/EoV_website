@@ -54,6 +54,38 @@ const translations = {
     product3Tag3: "対話体験",
     product3Link: "使ってみる",
     productLink: "詳細ページを準備中",
+    founderKicker: "代表",
+    founderHeading: "代表挨拶",
+    founderLead:
+      "0から1を生み出せる人に、1を100に拡張するための「人間拡張」を提供する。",
+    founderMessage1:
+      "このビジョンのもと、私はEdge of Visionを創業しました。",
+    founderMessage2:
+      "生成AIの進化により、創作や開発の生産性は飛躍的に向上しました。しかし本質は変わっていません。最初の「1」──すなわち構想や視点、問いを生み出すのは依然として人間です。",
+    founderMessage3:
+      "実際、「面白い話を書いて」と入力しても優れた作品は生まれません。一方で、明確な構想や意図を与えれば、AIはそれを高い解像度で拡張し、想像以上のアウトプットへと引き上げます。",
+    founderMessage4:
+      "問題は、その「1」を「100」に拡張する過程にあります。現状のAI活用には、ツールの習熟、試行錯誤、非効率なプロンプト調整など、多くの摩擦が存在します。その結果、本来価値を生み出せるはずの人材が、技術的ハードルによって機会を失っています。",
+    founderMessage5:
+      "Edge of Visionは、この摩擦を取り除きます。創造の本質である「1」を生み出す力に集中できる環境を提供し、その価値を最大化することを目的としています。",
+    founderMessage6:
+      "たとえば、漫画制作支援ツール「Lyra」は、構想段階からストーリーを構造的に展開し、一貫性のある作画を実現します。また、AI討論プラットフォーム「The Council」は、思想を持つエージェント同士の対話を通じて、アイデアを多角的に深化させます。",
+    founderMessage7:
+      "いずれも、「構想を持つ人間」が主役となる設計です。",
+    founderMessage8:
+      "まだ言語化されていないアイデア、まだ形になっていない才能を、次のレベルへ引き上げる。そのためのインフラを提供することが、私たちの役割です。",
+    founderMessage9:
+      "まだ見ぬ創り手が、自らも想像しなかった領域へ到達すること。それこそが、Edge of Visionの使命です。",
+    profileKicker: "Profile",
+    profileHeading: "代表プロフィール",
+    profileBody1:
+      "2004年生まれ。慶應義塾大学理工学部システムデザイン工学科在学。",
+    profileBody2:
+      "学生時代よりソフトウェア開発およびAIを活用したプロダクト開発に取り組む。複数の個人開発プロジェクトを通じて、「人間の発想を拡張するツール」の設計・実装を継続。",
+    profileBody3:
+      "主なプロジェクトとして、マルチアセットに対応した価格アラートアプリの開発、漫画制作支援ツール「Lyra」、AIエージェントによる討論プラットフォーム「The Council」などを企画・開発。",
+    profileBody4:
+      "現在は、「0から1を生み出せる人の価値を最大化する」という思想のもと、Edge of Visionを創業。AI時代における創造の在り方を再定義するプロダクトの開発に取り組んでいる。",
     ctaHeading: "私たちの仕事を見る。",
     ctaBody:
       "Edge of Vision が現在取り組んでいるプロダクトを一覧で確認できます。",
@@ -110,6 +142,38 @@ const translations = {
     product3Tag3: "Dialogue systems",
     product3Link: "Try it",
     productLink: "Product page coming soon",
+    founderKicker: "Founder",
+    founderHeading: "Message from the Founder",
+    founderLead:
+      "We provide human augmentation that helps people who can create the first 1 expand that 1 into 100.",
+    founderMessage1:
+      "That vision is why I founded Edge of Vision.",
+    founderMessage2:
+      "Generative AI has dramatically improved productivity in creation and development. But the essence has not changed. The first 1, the original concept, perspective, or question, is still created by human beings.",
+    founderMessage3:
+      "In practice, simply typing \"write an interesting story\" does not produce a great work. But when a clear concept and intent are given, AI can expand them at high resolution and elevate them into output beyond expectation.",
+    founderMessage4:
+      "The real challenge lies in expanding that 1 into 100. Today, AI use still involves heavy friction: mastering tools, repeated trial and error, and inefficient prompt tuning. As a result, people who should be able to create real value often lose opportunities because of technical barriers.",
+    founderMessage5:
+      "Edge of Vision removes that friction. Our goal is to create an environment where people can focus on producing the essential 1 at the heart of creation, and maximize the value of that capability.",
+    founderMessage6:
+      "For example, Lyra, our manga creation support tool, structurally develops stories from the concept stage and enables consistent visual execution. The Council, our AI discussion platform, deepens ideas from multiple angles through dialogue between agents with distinct philosophies.",
+    founderMessage7:
+      "In every case, the human with the original vision remains the central actor.",
+    founderMessage8:
+      "Our role is to provide the infrastructure that lifts ideas not yet fully verbalized and talent not yet fully formed to the next level.",
+    founderMessage9:
+      "Helping unseen creators reach places they themselves did not imagine. That is the mission of Edge of Vision.",
+    profileKicker: "Profile",
+    profileHeading: "Founder Profile",
+    profileBody1:
+      "Born in 2004. Currently studying in the Department of System Design Engineering, Faculty of Science and Technology, Keio University.",
+    profileBody2:
+      "Has been engaged in software development and AI-driven product development since student years. Through multiple independent projects, has continuously designed and implemented tools that expand human imagination.",
+    profileBody3:
+      "Major projects include a multi-asset price alert app, the manga creation support tool Lyra, and the AI-agent debate platform The Council.",
+    profileBody4:
+      "Now leading Edge of Vision under the belief that the value of people who can create something from zero to one should be maximized, while building products that redefine creativity in the AI era.",
     ctaHeading: "Explore our work.",
     ctaBody:
       "Browse the products Edge of Vision is actively building today.",

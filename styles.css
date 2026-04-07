@@ -116,6 +116,7 @@ main,
 .hero,
 .vision,
 .products,
+.founder,
 .technology,
 .cta,
 .site-footer {
@@ -474,6 +475,9 @@ body[data-language="en"] .hero__lede {
 .signal-card,
 .vision__panel,
 .product-card,
+.founder__message,
+.founder__photo-panel,
+.founder__bio,
 .tech-panel,
 .cta__panel,
 .footer-brand,
@@ -493,6 +497,9 @@ body[data-language="en"] .hero__lede {
 .signal-card::before,
 .vision__panel::before,
 .product-card::before,
+.founder__message::before,
+.founder__photo-panel::before,
+.founder__bio::before,
 .tech-panel::before,
 .cta__panel::before,
 .footer-brand::before,
@@ -521,6 +528,7 @@ body[data-language="en"] .hero__lede {
 
 .signal-card strong,
 .product-card h3,
+.founder__bio h3,
 .tech-panel h3,
 .footer-column h3 {
   display: block;
@@ -542,6 +550,8 @@ body[data-language="en"] .hero__lede {
 .signal-card p,
 .vision__body,
 .product-card p,
+.founder__message p,
+.founder__bio p,
 .tech-panel p,
 .cta__panel p,
 .footer-brand p,
@@ -582,6 +592,83 @@ body[data-language="en"] .hero__lede {
 
 .products {
   padding-top: 124px;
+}
+
+.founder {
+  padding-top: 136px;
+}
+
+.founder__message,
+.founder__profile {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.founder__message {
+  display: grid;
+  gap: 18px;
+  padding: 38px 42px;
+  background:
+    radial-gradient(circle at top left, rgba(212, 175, 55, 0.09), transparent 26%),
+    radial-gradient(circle at right center, rgba(58, 123, 255, 0.12), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent),
+    var(--panel-strong);
+}
+
+.founder__lead {
+  margin-bottom: 8px;
+  color: #f5f0da;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", "Times New Roman", serif;
+  font-size: clamp(1.45rem, 2.8vw, 2.5rem);
+  line-height: 1.35;
+  text-wrap: balance;
+}
+
+.founder__profile {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr);
+  gap: 26px;
+  margin-top: 30px;
+}
+
+.founder__photo-panel,
+.founder__bio {
+  padding: 28px;
+}
+
+.founder__photo-panel {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent),
+    rgba(4, 8, 16, 0.88);
+}
+
+.founder__photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 22px;
+  object-fit: cover;
+  object-position: center 24%;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.05),
+    0 18px 34px rgba(0, 0, 0, 0.34);
+}
+
+.founder__bio {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  background:
+    radial-gradient(circle at top right, rgba(58, 123, 255, 0.12), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent),
+    rgba(4, 8, 16, 0.88);
+}
+
+.founder__profile-kicker {
+  color: var(--gold);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .products__intro {
@@ -927,6 +1014,7 @@ body[data-language="ja"] .products__launch span {
 @media (max-width: 1024px) {
   .section-heading--split,
   .technology__layout,
+  .founder__profile,
   .site-footer {
     grid-template-columns: 1fr;
   }
@@ -1064,6 +1152,9 @@ body[data-language="ja"] .products__launch span {
   }
 
   .vision__panel,
+  .founder__message,
+  .founder__photo-panel,
+  .founder__bio,
   .tech-panel,
   .cta__panel,
   .footer-brand,
@@ -1074,6 +1165,10 @@ body[data-language="ja"] .products__launch span {
 
   .technology__orbital {
     min-height: 300px;
+  }
+
+  .founder__photo {
+    aspect-ratio: 4 / 4.6;
   }
 
   .orbital-node {
