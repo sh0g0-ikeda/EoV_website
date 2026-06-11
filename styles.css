@@ -1098,14 +1098,47 @@ body[data-language="en"] .hero__lede {
   padding: 72px 0 108px;
 }
 
+.lyra-site-header .header-actions {
+  margin-left: auto;
+}
+
+.lyra-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.lyra-nav a {
+  padding: 10px 16px;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.lyra-nav a:hover,
+.lyra-nav a:focus-visible {
+  color: var(--text);
+  background: rgba(58, 123, 255, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(58, 123, 255, 0.26);
+}
+
 .lyra-hero,
-.lyra-pricing {
+.lyra-pricing,
+.lyra-billing,
+.lyra-flow {
   display: grid;
-  gap: 26px;
+  gap: 28px;
 }
 
 .lyra-hero {
-  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  grid-template-columns: minmax(0, 1.02fr) minmax(340px, 0.98fr);
   align-items: center;
   padding-top: 56px;
 }
@@ -1117,16 +1150,24 @@ body[data-language="en"] .hero__lede {
 
 .lyra-hero h1 {
   margin: 0;
+  max-width: 11ch;
   font-family: "Yu Mincho", "Hiragino Mincho ProN", "Times New Roman", serif;
-  font-size: clamp(2.5rem, 5.4vw, 5rem);
+  font-size: clamp(2.7rem, 5.6vw, 5.2rem);
   line-height: 0.95;
   text-wrap: balance;
 }
 
-.lyra-hero__body {
-  max-width: 60ch;
+.lyra-hero__body,
+.lyra-summary-card p,
+.lyra-flow__copy p,
+.lyra-note,
+.lyra-billing__copy p {
   color: rgba(234, 234, 240, 0.88);
   line-height: 1.9;
+}
+
+.lyra-hero__body {
+  max-width: 58ch;
   font-size: 1.04rem;
 }
 
@@ -1152,11 +1193,10 @@ body[data-language="en"] .hero__lede {
 }
 
 .lyra-hero__visual,
-.lyra-card,
+.lyra-summary-card,
 .lyra-table-card,
-.lyra-shot,
-.lyra-callout,
-.lyra-faq__item {
+.lyra-frame,
+.lyra-billing__copy {
   position: relative;
   overflow: hidden;
   border: var(--border);
@@ -1170,11 +1210,10 @@ body[data-language="en"] .hero__lede {
 }
 
 .lyra-hero__visual::before,
-.lyra-card::before,
+.lyra-summary-card::before,
 .lyra-table-card::before,
-.lyra-shot::before,
-.lyra-callout::before,
-.lyra-faq__item::before {
+.lyra-frame::before,
+.lyra-billing__copy::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -1194,127 +1233,202 @@ body[data-language="en"] .hero__lede {
 }
 
 .lyra-hero__visual {
-  padding: 32px;
+  padding: 30px;
   background:
-    radial-gradient(circle at 70% 30%, rgba(58, 123, 255, 0.16), transparent 28%),
-    radial-gradient(circle at 24% 58%, rgba(212, 175, 55, 0.12), transparent 22%),
+    radial-gradient(circle at 78% 24%, rgba(212, 175, 55, 0.15), transparent 24%),
+    radial-gradient(circle at 20% 64%, rgba(58, 123, 255, 0.18), transparent 24%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent),
     rgba(5, 10, 18, 0.92);
 }
 
-.lyra-mark {
+.lyra-hero__visual-card {
   display: grid;
-  justify-items: center;
-  gap: 20px;
+  gap: 24px;
 }
 
-.lyra-mark__icon {
-  width: min(360px, 100%);
+.lyra-wordmark {
+  width: min(620px, 100%);
+  margin: 0 auto;
   filter:
-    drop-shadow(0 0 22px rgba(212, 175, 55, 0.18))
-    drop-shadow(0 0 48px rgba(58, 123, 255, 0.14));
+    drop-shadow(0 0 16px rgba(255, 233, 130, 0.18))
+    drop-shadow(0 0 36px rgba(58, 123, 255, 0.14));
 }
 
-.lyra-mark__text {
+.lyra-stat-grid,
+.lyra-summary {
   display: grid;
-  gap: 8px;
-  text-align: center;
+  gap: 18px;
 }
 
-.lyra-mark__name {
-  color: #ffe982;
-  font-family: "Yu Mincho", "Hiragino Mincho ProN", "Times New Roman", serif;
-  font-size: clamp(3rem, 8vw, 5.4rem);
-  font-style: italic;
-  line-height: 0.95;
-  text-shadow:
-    0 0 18px rgba(255, 233, 130, 0.45),
-    0 0 42px rgba(212, 175, 55, 0.22);
-}
-
-.lyra-mark__sub {
-  color: rgba(234, 234, 240, 0.82);
-  font-size: 1.06rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-}
-
-.lyra-section {
-  padding-top: 136px;
-}
-
-.lyra-grid {
-  display: grid;
-  gap: 22px;
-}
-
-.lyra-grid--three {
+.lyra-stat-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.lyra-grid--two {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.lyra-stat {
+  padding: 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(4, 8, 16, 0.56);
 }
 
-.lyra-card,
-.lyra-table-card,
-.lyra-shot,
-.lyra-callout,
-.lyra-faq__item {
-  padding: 28px;
-}
-
-.lyra-card__step,
-.lyra-shot__file {
+.lyra-stat span,
+.lyra-step,
+.lyra-summary-card__label,
+.lyra-frame__eyebrow,
+.lyra-frame__file {
   display: inline-flex;
-  margin-bottom: 14px;
   color: var(--gold);
   font-size: 0.82rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
-.lyra-card h3,
+.lyra-stat span {
+  margin-bottom: 12px;
+}
+
+.lyra-stat strong {
+  display: block;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.lyra-section {
+  padding-top: 136px;
+}
+
+.lyra-section .section-heading h2 {
+  max-width: 20ch;
+  font-size: clamp(2.1rem, 4.6vw, 4rem);
+}
+
+.lyra-summary {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.lyra-summary-card,
+.lyra-table-card,
+.lyra-billing__copy {
+  padding: 28px;
+}
+
+.lyra-summary-card__label,
+.lyra-step {
+  margin-bottom: 14px;
+}
+
+.lyra-summary-card h3,
+.lyra-flow__copy h3,
 .lyra-table-card h3,
-.lyra-shot h3,
-.lyra-callout h3,
-.lyra-faq__item h3 {
+.lyra-billing__copy h3,
+.lyra-frame__title {
   margin: 0 0 12px;
   font-family: "Yu Mincho", "Hiragino Mincho ProN", "Times New Roman", serif;
-  font-size: 1.4rem;
 }
 
-.lyra-card p,
-.lyra-shot p,
-.lyra-callout li,
-.lyra-faq__item p,
-.lyra-note {
-  color: var(--muted);
-  line-height: 1.85;
+.lyra-summary-card h3,
+.lyra-flow__copy h3,
+.lyra-billing__copy h3 {
+  font-size: 1.5rem;
+  line-height: 1.35;
 }
 
-.lyra-checklist {
+.lyra-flow-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
+  gap: 34px;
 }
 
-.lyra-checklist__column {
-  position: relative;
-  overflow: hidden;
-  padding: 28px;
-  border: var(--border);
-  border-radius: var(--radius-lg);
+.lyra-flow {
+  grid-template-columns: minmax(300px, 0.92fr) minmax(0, 1.08fr);
+  align-items: center;
+}
+
+.lyra-flow--reverse {
+  grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr);
+}
+
+.lyra-flow--reverse .lyra-frame {
+  order: 2;
+}
+
+.lyra-flow--reverse .lyra-flow__copy {
+  order: 1;
+}
+
+.lyra-frame {
+  min-height: 100%;
+  padding: 18px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent),
-    rgba(4, 8, 16, 0.88);
+    radial-gradient(circle at 82% 18%, rgba(58, 123, 255, 0.18), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent),
+    rgba(6, 10, 18, 0.9);
 }
 
-.lyra-checklist__column ol {
-  margin: 0;
-  padding-left: 24px;
-  color: rgba(234, 234, 240, 0.92);
-  line-height: 2;
+.lyra-frame__topbar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.lyra-frame__topbar span {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.lyra-frame__topbar span:first-child {
+  background: rgba(255, 138, 101, 0.9);
+}
+
+.lyra-frame__topbar span:nth-child(2) {
+  background: rgba(255, 214, 102, 0.9);
+}
+
+.lyra-frame__topbar span:nth-child(3) {
+  background: rgba(125, 216, 120, 0.9);
+}
+
+.lyra-frame__body {
+  display: grid;
+  align-content: center;
+  min-height: 360px;
+  padding: 22px;
+  border-radius: 20px;
+  border: 1px dashed rgba(212, 175, 55, 0.32);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent),
+    rgba(3, 6, 13, 0.78);
+}
+
+.lyra-frame__title {
+  font-size: 1.55rem;
+  line-height: 1.28;
+}
+
+.lyra-frame__points {
+  display: grid;
+  gap: 10px;
+  margin: 10px 0 18px;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.lyra-frame__file {
+  color: #dce7ff;
+  font-family: "Cascadia Mono", "Consolas", monospace;
+  letter-spacing: 0.08em;
+  text-transform: none;
+}
+
+.lyra-flow__copy {
+  padding: 10px 0;
+}
+
+.lyra-flow__lead {
+  margin-bottom: 14px;
+  color: var(--text);
 }
 
 .lyra-pricing {
@@ -1348,23 +1462,14 @@ body[data-language="en"] .hero__lede {
   margin-top: 16px;
 }
 
-.lyra-shot code {
-  color: #dce7ff;
-  font-family: "Cascadia Mono", "Consolas", monospace;
+.lyra-billing {
+  grid-template-columns: minmax(300px, 0.92fr) minmax(0, 1.08fr);
+  margin-top: 26px;
 }
 
-.lyra-callout ul {
+.lyra-billing__copy {
   display: grid;
-  gap: 10px;
-  margin: 0;
-  padding-left: 18px;
-}
-
-.lyra-faq {
-  display: grid;
-  gap: 18px;
-  max-width: 980px;
-  margin: 0 auto;
+  align-content: center;
 }
 
 body[data-language="ja"] .site-nav a,
@@ -1410,16 +1515,29 @@ body[data-language="ja"] .products__launch span {
   .technology__layout,
   .founder__profile,
   .lyra-hero,
-  .lyra-checklist,
   .lyra-pricing,
+  .lyra-billing,
   .site-footer {
     grid-template-columns: 1fr;
   }
 
   .hero__signal-grid,
-  .lyra-grid--three,
-  .lyra-grid--two,
+  .lyra-summary,
   .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lyra-flow,
+  .lyra-flow--reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .lyra-flow--reverse .lyra-frame,
+  .lyra-flow--reverse .lyra-flow__copy {
+    order: initial;
+  }
+
+  .lyra-stat-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1555,12 +1673,9 @@ body[data-language="ja"] .products__launch span {
   .founder__photo-panel,
   .founder__bio,
   .legal-card,
-  .lyra-card,
   .lyra-table-card,
-  .lyra-shot,
-  .lyra-callout,
-  .lyra-faq__item,
-  .lyra-checklist__column,
+  .lyra-summary-card,
+  .lyra-billing__copy,
   .lyra-hero__visual,
   .tech-panel,
   .cta__panel,
@@ -1593,6 +1708,19 @@ body[data-language="ja"] .products__launch span {
 
   .lyra-table {
     font-size: 0.95rem;
+  }
+
+  .lyra-frame {
+    padding: 14px;
+  }
+
+  .lyra-frame__body {
+    min-height: 300px;
+    padding: 18px;
+  }
+
+  .lyra-nav {
+    justify-content: center;
   }
 
   .orbital-node {
