@@ -6,7 +6,7 @@
   <title>Lyra | Edge of Vision</title>
   <meta
     name="description"
-    content="Lyraは、ストーリー・キャラクター・ページ構成を入力しながら、AIと一緒に漫画ページを制作するための支援SaaSです。"
+    content="Lyraは、ストーリー・キャラクター・ページ構成を入力しながら、AIと一緒に漫画ページを作る制作支援ツールです。初めての方向けに、できること・使い方・料金をまとめています。"
   >
   <link rel="icon" href="pictures/logo.png">
   <link rel="stylesheet" href="styles.css">
@@ -22,9 +22,11 @@
     <div class="header-actions">
       <nav class="lyra-nav" aria-label="Lyra page">
         <a href="index.html#products">Products</a>
-        <a href="#overview">概要</a>
+        <a href="#overview">Lyraとは</a>
+        <a href="#start">はじめに</a>
         <a href="#journey">使い方</a>
         <a href="#pricing">料金</a>
+        <a href="#faq">FAQ</a>
       </nav>
     </div>
   </header>
@@ -32,23 +34,28 @@
   <main class="lyra-main">
     <section class="lyra-hero">
       <div class="lyra-hero__copy">
-        <p class="section-kicker">Manga Creation SaaS</p>
-        <h1>構想からページ完成まで、漫画制作の流れに沿って進める。</h1>
+        <p class="section-kicker">Manga Creation Tool</p>
+        <h1>ストーリーから、漫画ページへ。</h1>
         <p class="lyra-hero__body">
-          Lyra は、ストーリー・キャラクター・ページ構成を入力しながら、
-          AI と一緒に漫画ページを作る制作支援 SaaS です。
-          プロンプトを書くことよりも、作品の中身を整理して形にすることへ集中できます。
+          Lyra は、ストーリー・キャラクター・ページ構成を入力して、
+          AI と一緒に漫画ページを作る制作支援ツールです。
+          プロンプトを書くより、作品の中身を整理して漫画化することに集中できます。
+        </p>
+        <p class="lyra-meta">
+          このページは、Lyra を初めて見る方と、使い始めたばかりの方に向けた紹介・取扱説明です。
+          上から順に読むと、できること・使い方・料金が分かります。
         </p>
 
         <div class="lyra-hero__actions">
-          <a class="button button--primary" href="#journey">制作フローを見る</a>
+          <a class="button button--primary" href="#start">はじめての使い方</a>
           <a class="button button--secondary" href="#pricing">料金を見る</a>
         </div>
 
         <ul class="lyra-pills" aria-label="Lyra highlights">
           <li>StoryAI とテキスト改善は無料</li>
-          <li>キャラクターとページ生成はクレジット制</li>
-          <li>日本語 UI / 英語 UI に対応</li>
+          <li>画像生成はクレジット制</li>
+          <li>日本語 / 英語 UI に対応</li>
+          <li>新規登録でお試し 12 クレジット</li>
         </ul>
       </div>
 
@@ -58,15 +65,15 @@
 
           <div class="lyra-stat-grid" aria-label="Lyra summary">
             <div class="lyra-stat">
-              <span>Input</span>
-              <strong>構想 / キャラ / ページ意図</strong>
+              <span>入力するもの</span>
+              <strong>ストーリー / キャラ / ページ構成</strong>
             </div>
             <div class="lyra-stat">
-              <span>Output</span>
+              <span>できあがるもの</span>
               <strong>コマ設計済みの漫画ページ</strong>
             </div>
             <div class="lyra-stat">
-              <span>Best For</span>
+              <span>向いている人</span>
               <strong>描きたい内容はあるが制作が重い人</strong>
             </div>
           </div>
@@ -74,272 +81,357 @@
       </div>
     </section>
 
+    <!-- ヒーロー直下：制作コンソール全体のスクリーンショット -->
+    <section class="lyra-preview-band" aria-label="Lyra console preview">
+      <figure class="lyra-shot lyra-shot--wide">
+        <div class="lyra-shot__frame">
+          <div class="lyra-frame__topbar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="lyra-shot__placeholder">
+            <p class="lyra-frame__eyebrow">Console preview</p>
+            <p class="lyra-shot__hint">ここに制作コンソール全体のスクリーンショットが入ります</p>
+            <ul class="lyra-frame__points">
+              <li>左：作品 / ストーリー</li>
+              <li>中央：編集画面</li>
+              <li>右：ジョブ状態 / クレジット残高</li>
+            </ul>
+            <p class="lyra-frame__file">hero-console-ja.png</p>
+          </div>
+        </div>
+        <figcaption>左に作品とストーリー、中央に編集、右に生成ジョブとクレジット。1 画面で制作の流れを管理します。</figcaption>
+      </figure>
+    </section>
+
     <section class="lyra-section" id="overview">
       <div class="section-heading">
         <p class="section-kicker">Overview</p>
-        <h2>初めて見る人向けに言うと、Lyra は何か。</h2>
+        <h2>初めての方へ。Lyra はこういうツールです。</h2>
       </div>
 
       <div class="lyra-summary">
         <article class="lyra-summary-card">
           <span class="lyra-summary-card__label">1. 入力するもの</span>
-          <h3>まず入れるのは、絵の指示ではなく作品の中身です。</h3>
+          <h3>最初に入れるのは、絵の指示ではなく作品の中身。</h3>
           <p>
-            タイトル、ジャンル、テーマ、キャラクター設定、ページごとの意図を整理して入れていきます。
-            先に作品の骨格を作るので、AI に丸投げする感覚ではなく、制作工程を前に進める道具として使えます。
+            タイトル、ジャンル、テーマ、キャラクター設定、ページごとの意図を整理して入れます。
+            作品の骨格を先に作るので、AI に丸投げするのではなく、制作工程を一歩ずつ前へ進める道具として使えます。
           </p>
         </article>
 
         <article class="lyra-summary-card">
-          <span class="lyra-summary-card__label">2. 返ってくるもの</span>
-          <h3>返ってくるのは、生成画像単体ではなく制作に使えるページ設計です。</h3>
+          <span class="lyra-summary-card__label">2. できあがるもの</span>
+          <h3>返ってくるのは、画像 1 枚ではなくページ全体の設計。</h3>
           <p>
-            ストーリー改善案、キャラクター参照、ページ構成、コマごとの演出案、生成済みページまでがつながっています。
-            どの段階で直せばいいかが見えるので、試行錯誤が散らばりません。
+            ストーリー改善案、キャラクター参照、ページ構成、コマごとの演出、生成済みページまでがつながっています。
+            どの段階で直せばよいかが見えるので、試行錯誤が散らばりません。
           </p>
         </article>
 
         <article class="lyra-summary-card">
-          <span class="lyra-summary-card__label">3. 向いている人</span>
-          <h3>「描きたいものはあるが、制作の摩擦が大きい」人向けです。</h3>
+          <span class="lyra-summary-card__label">3. できないこと</span>
+          <h3>ボタン一つで完成、ではありません。</h3>
           <p>
-            漫画の構想はあるが、ネーム設計、絵柄の統一、コマ演出、画像生成の往復が重い。
-            Lyra はその摩擦を減らして、アイデアをページとして完成させるまでの距離を短くします。
+            Lyra は制作支援ツールです。良い結果にするには、キャラ設定やコマ内容を確認・修正しながら仕上げます。
+            その代わり、ネーム設計・絵柄の統一・画像生成の往復といった重い作業の負担を減らせます。
           </p>
         </article>
       </div>
     </section>
 
+    <section class="lyra-section" id="start">
+      <div class="section-heading">
+        <p class="section-kicker">Quick Start</p>
+        <h2>登録してから、最初の 1 ページができるまで。</h2>
+        <p class="lyra-section__lead">
+          細かい説明の前に、全体の流れだけ先に掴んでください。やることは大きく 4 つ、ステップにすると次の通りです。
+        </p>
+      </div>
+
+      <div class="lyra-quickstart">
+        <ol class="lyra-quicklist">
+          <li><span class="lyra-quicknum">1</span><div><strong>作品を作成する</strong><p>タイトル・ジャンル・世界観を登録。</p></div></li>
+          <li><span class="lyra-quicknum">2</span><div><strong>章と話を作成する</strong><p>作品を章・話に分けて整理。</p></div></li>
+          <li><span class="lyra-quicknum">3</span><div><strong>ストーリーを入力する</strong><p>必要なら StoryAI で流れを整える。</p></div></li>
+          <li><span class="lyra-quicknum">4</span><div><strong>キャラを作成する</strong><p>名前と見た目の要点を登録。</p></div></li>
+          <li><span class="lyra-quicknum">5</span><div><strong>参照画像を確定する</strong><p>取り込みかプレビュー生成で確定。</p></div></li>
+          <li><span class="lyra-quicknum">6</span><div><strong>ページ骨格を生成する</strong><p>話を指定ページ数へ自動で分散。</p></div></li>
+          <li><span class="lyra-quicknum">7</span><div><strong>コマの内容を確認する</strong><p>登場人物・構図・セリフを調整。</p></div></li>
+          <li><span class="lyra-quicknum">8</span><div><strong>ページ画像を生成する</strong><p>現在の設定から画像を作る。</p></div></li>
+          <li><span class="lyra-quicknum">9</span><div><strong>直して再生成する</strong><p>気になる点を直し、必要なら再生成。</p></div></li>
+          <li><span class="lyra-quicknum">10</span><div><strong>保存・書き出し</strong><p>PDF または画像で書き出す。</p></div></li>
+        </ol>
+        <p class="lyra-quickstart__note">
+          下の「使い方」では、各ステップが実際の画面でどう進むかを順番に説明します。
+        </p>
+      </div>
+    </section>
+
     <section class="lyra-section" id="journey">
       <div class="section-heading">
-        <p class="section-kicker">Journey</p>
-        <h2>1ページができるまでを、画面ごとに追う。</h2>
+        <p class="section-kicker">How to use</p>
+        <h2>1 ページができるまでを、画面ごとに追う。</h2>
+        <p class="lyra-section__lead">
+          各ステップは「画面で何をするか」と「画面で何が起こるか」をセットで説明します。
+        </p>
       </div>
 
       <div class="lyra-flow-list">
+
+        <!-- Step 01 -->
         <article class="lyra-flow">
-          <div class="lyra-frame" aria-label="StoryAI screenshot placeholder">
-            <div class="lyra-frame__topbar">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <div class="lyra-frame__body">
-              <p class="lyra-frame__eyebrow">StoryAI 改善画面</p>
-              <h3 class="lyra-frame__title">話の骨格を整える画面を配置</h3>
-              <ul class="lyra-frame__points">
-                <li>元のストーリー入力欄</li>
-                <li>AI の改善提案</li>
-                <li>採用後の変化が分かる状態</li>
-              </ul>
-              <p class="lyra-frame__file">story-ai-improve-ja.png</p>
+          <div class="lyra-shot" aria-label="作品・章・話の管理画面のスクリーンショット枠">
+            <div class="lyra-shot__frame">
+              <div class="lyra-frame__topbar"><span></span><span></span><span></span></div>
+              <div class="lyra-shot__placeholder">
+                <p class="lyra-frame__eyebrow">作品 / 章・話</p>
+                <p class="lyra-shot__hint">ここにスクリーンショットが入ります</p>
+                <ul class="lyra-frame__points">
+                  <li>作品のタイトルとジャンル</li>
+                  <li>章と話の一覧</li>
+                  <li>いま作業中の話が分かる状態</li>
+                </ul>
+                <p class="lyra-frame__file">work-setup-ja.png</p>
+              </div>
             </div>
           </div>
 
           <div class="lyra-flow__copy">
             <span class="lyra-step">Step 01</span>
-            <h3>StoryAI で、構想を漫画向きの流れに整える。</h3>
-            <p class="lyra-flow__lead">
-              最初にやるのは画像生成ではありません。まず、話の起点と展開をテキストで整理します。
-            </p>
+            <h3>作品を作り、章と話に分けて整理する。</h3>
+            <p class="lyra-flow__lead">画面ですること：タイトル・ジャンル・世界観・テーマを登録し、章と話を作ります。</p>
             <p>
-              Lyra では、曖昧なアイデアをそのまま抱えたまま進めず、StoryAI で読みやすい流れに整えてから制作へ入ります。
-              ここで初めて、Lyra が「絵を出すツール」ではなく「漫画制作を前進させる SaaS」だと伝わります。
+              話は「序盤・中盤・クライマックス・終盤」に分けて書くことも、全体をまとめて書くこともできます。
+              作品ごとに章・話が一覧で並ぶので、どこを作業中かが分かります。
             </p>
           </div>
         </article>
 
+        <!-- Step 02 -->
         <article class="lyra-flow lyra-flow--reverse">
-          <div class="lyra-frame" aria-label="Character editor screenshot placeholder">
-            <div class="lyra-frame__topbar">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <div class="lyra-frame__body">
-              <p class="lyra-frame__eyebrow">Character editor</p>
-              <h3 class="lyra-frame__title">キャラクター設定画面を配置</h3>
-              <ul class="lyra-frame__points">
-                <li>名前と役割</li>
-                <li>外見や服装の設定</li>
-                <li>参照画像入力の導線</li>
-              </ul>
-              <p class="lyra-frame__file">character-editor-ja.png</p>
+          <div class="lyra-shot" aria-label="ストーリー入力とStoryAIのスクリーンショット枠">
+            <div class="lyra-shot__frame">
+              <div class="lyra-frame__topbar"><span></span><span></span><span></span></div>
+              <div class="lyra-shot__placeholder">
+                <p class="lyra-frame__eyebrow">Story input / StoryAI</p>
+                <p class="lyra-shot__hint">ここにスクリーンショットが入ります</p>
+                <ul class="lyra-frame__points">
+                  <li>分割入力 / 全体入力の切り替え</li>
+                  <li>StoryAI の指示欄</li>
+                  <li>改善結果と反映ボタン</li>
+                </ul>
+                <p class="lyra-frame__file">story-ai-improve-ja.png</p>
+              </div>
             </div>
           </div>
 
           <div class="lyra-flow__copy">
             <span class="lyra-step">Step 02</span>
-            <h3>キャラクターを登録して、描写の基準を先に作る。</h3>
-            <p class="lyra-flow__lead">
-              誰が登場するかを先に定義することで、後のページ生成が安定します。
-            </p>
+            <h3>ストーリーを入力し、StoryAI で流れを整える。</h3>
+            <p class="lyra-flow__lead">画面ですること：話の本文を入力し、必要なら StoryAI に「もっと不穏に」「会話中心に」などと指示します。</p>
             <p>
-              名前だけでなく、見た目や役割まで一貫して管理するのが重要です。
-              初見の人に対しては、この画面で「Lyra はキャラ管理を前提にした制作ツールだ」と明確に伝えられます。
+              改善結果はすぐには上書きされません。反映ボタンを押した項目だけが入力欄へ入るので、気に入った部分だけ取り込めます。
+              気に入らなければ、その結果を踏まえて再指示できます。StoryAI などのテキスト改善はクレジットを消費しません。
+            </p>
+            <p class="lyra-callout">
+              <span>注意</span>
+              分割入力と全体入力を同時に使うと、どちらを基準にするか決められません。どちらか一方に絞ってください。
             </p>
           </div>
         </article>
 
+        <!-- Step 03 -->
         <article class="lyra-flow">
-          <div class="lyra-frame" aria-label="Character reference screenshot placeholder">
-            <div class="lyra-frame__topbar">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <div class="lyra-frame__body">
-              <p class="lyra-frame__eyebrow">Reference check</p>
-              <h3 class="lyra-frame__title">キャラ参照確認画面を配置</h3>
-              <ul class="lyra-frame__points">
-                <li>採用された参照画像</li>
-                <li>同一人物としての見え方</li>
-                <li>ページ生成前の確認状態</li>
-              </ul>
-              <p class="lyra-frame__file">character-reference-confirm-ja.png</p>
+          <div class="lyra-shot" aria-label="キャラクター編集画面のスクリーンショット枠">
+            <div class="lyra-shot__frame">
+              <div class="lyra-frame__topbar"><span></span><span></span><span></span></div>
+              <div class="lyra-shot__placeholder">
+                <p class="lyra-frame__eyebrow">Character editor</p>
+                <p class="lyra-shot__hint">ここにスクリーンショットが入ります</p>
+                <ul class="lyra-frame__points">
+                  <li>名前・別名・自由記述</li>
+                  <li>顔・髪・服装などの GUI 項目</li>
+                  <li>再現アンカーの入力欄</li>
+                </ul>
+                <p class="lyra-frame__file">character-editor-ja.png</p>
+              </div>
             </div>
           </div>
 
           <div class="lyra-flow__copy">
             <span class="lyra-step">Step 03</span>
-            <h3>同じ人物として描かれるかを、生成前に確認する。</h3>
-            <p class="lyra-flow__lead">
-              漫画制作で崩れやすいのは、キャラクターの一貫性です。
-            </p>
+            <h3>キャラクターを登録して、見た目の基準を作る。</h3>
+            <p class="lyra-flow__lead">画面ですること：名前・別名・自由記述に加えて、顔・髪・服装などの特徴を入力します。</p>
             <p>
-              Lyra では、ページを作り始める前に参照の確認ポイントを持てます。
-              これにより「出してから直す」ではなく、「崩れにくい状態で作る」という設計が伝わります。
+              GUI 項目はキャラの見た目を安定させるための補助です。別名や通称を登録しておくと、ストーリー内で名前表記が揺れても拾いやすくなります。
+              名前と自由記述だけでも始められます。
+            </p>
+            <p class="lyra-callout">
+              <span>注意</span>
+              空欄をすべて埋める必要はありません。重要な見た目だけ入力してください。
             </p>
           </div>
         </article>
 
+        <!-- Step 04 -->
         <article class="lyra-flow lyra-flow--reverse">
-          <div class="lyra-frame" aria-label="Page plan screenshot placeholder">
-            <div class="lyra-frame__topbar">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <div class="lyra-frame__body">
-              <p class="lyra-frame__eyebrow">Page planning</p>
-              <h3 class="lyra-frame__title">ページ構成生成結果を配置</h3>
-              <ul class="lyra-frame__points">
-                <li>ページ全体の目的</li>
-                <li>コマ数と並び</li>
-                <li>各コマの役割が分かる状態</li>
-              </ul>
-              <p class="lyra-frame__file">page-plan-generated-ja.png</p>
+          <div class="lyra-shot" aria-label="キャラ参照画像の確定画面のスクリーンショット枠">
+            <div class="lyra-shot__frame">
+              <div class="lyra-frame__topbar"><span></span><span></span><span></span></div>
+              <div class="lyra-shot__placeholder">
+                <p class="lyra-frame__eyebrow">Reference confirm</p>
+                <p class="lyra-shot__hint">ここにスクリーンショットが入ります</p>
+                <ul class="lyra-frame__points">
+                  <li>生成プレビューと確定済みリファレンス</li>
+                  <li>同じ人物としての見え方</li>
+                  <li>ページ生成前の確認状態</li>
+                </ul>
+                <p class="lyra-frame__file">character-reference-confirm-ja.png</p>
+              </div>
             </div>
           </div>
 
           <div class="lyra-flow__copy">
             <span class="lyra-step">Step 04</span>
-            <h3>ページ構成を先に決めて、1ページ単位で演出を組み立てる。</h3>
-            <p class="lyra-flow__lead">
-              ここで Lyra は「ページ設計ツール」としての顔を見せます。
-            </p>
+            <h3>参照画像を確定して、キャラを安定させる。</h3>
+            <p class="lyra-flow__lead">画面ですること：画像取り込み、または全身プレビュー生成で参照画像を作り、使う画像をリファレンスとして確定します。</p>
             <p>
-              いきなり絵を作るのではなく、どのコマに何を置くかを先に整理します。
-              初見の人にとっては、この画面があることで SaaS の役割がかなり理解しやすくなります。
+              確定したリファレンスはページ生成時に参照され、キャラの見た目が安定しやすくなります。
+              画像取り込みは 1 クレジット、プレビュー生成も 1 クレジットです。ただし AI 生成の性質上、完全に同一になることは保証しません。
             </p>
           </div>
         </article>
 
+        <!-- Step 05 -->
         <article class="lyra-flow">
-          <div class="lyra-frame" aria-label="Panel editor screenshot placeholder">
-            <div class="lyra-frame__topbar">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <div class="lyra-frame__body">
-              <p class="lyra-frame__eyebrow">Panel editor</p>
-              <h3 class="lyra-frame__title">コマ編集画面を配置</h3>
-              <ul class="lyra-frame__points">
-                <li>ショットやアングルの調整</li>
-                <li>台詞や演出意図</li>
-                <li>コマごとの差分が分かる状態</li>
-              </ul>
-              <p class="lyra-frame__file">panel-editor-ja.png</p>
+          <div class="lyra-shot" aria-label="ページ骨格生成後の画面のスクリーンショット枠">
+            <div class="lyra-shot__frame">
+              <div class="lyra-frame__topbar"><span></span><span></span><span></span></div>
+              <div class="lyra-shot__placeholder">
+                <p class="lyra-frame__eyebrow">Page planning</p>
+                <p class="lyra-shot__hint">ここにスクリーンショットが入ります</p>
+                <ul class="lyra-frame__points">
+                  <li>複数ページとページごとの目的</li>
+                  <li>コマ数と並び</li>
+                  <li>各コマの状況・登場人物・セリフが自動入力された状態</li>
+                </ul>
+                <p class="lyra-frame__file">page-plan-generated-ja.png</p>
+              </div>
             </div>
           </div>
 
           <div class="lyra-flow__copy">
             <span class="lyra-step">Step 05</span>
-            <h3>コマごとに視点と演出を詰めて、ページを具体化する。</h3>
-            <p class="lyra-flow__lead">
-              1ページの中でも、見せたい情報量はコマごとに違います。
-            </p>
+            <h3>ページ骨格を生成して、話をページへ分散する。</h3>
+            <p class="lyra-flow__lead">画面ですること：ストーリーを指定したページ数へ分散します。</p>
             <p>
-              Lyra はコマ単位で内容を詰められるので、ページ全体の流れを保ったまま細部だけを調整できます。
-              この説明とスクショが 1 対 1 で結びつくことで、使い方が直感的に伝わります。
+              ページごとに目的と連続性メモが作られ、各コマに状況・登場人物・構図・カメラ・背景・セリフが自動入力されます。
+              これは漫画化の下書きです。テキストの骨格生成はクレジットを消費しません。
+            </p>
+            <p class="lyra-callout">
+              <span>注意</span>
+              生成前に登場人物・セリフ・構図を確認してください。上書き再生成すると、現在のページ構成が置き換わります。
             </p>
           </div>
         </article>
 
+        <!-- Step 06 -->
         <article class="lyra-flow lyra-flow--reverse">
-          <div class="lyra-frame" aria-label="Generated page screenshot placeholder">
-            <div class="lyra-frame__topbar">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <div class="lyra-frame__body">
-              <p class="lyra-frame__eyebrow">Generated result</p>
-              <h3 class="lyra-frame__title">完成ページのサンプルを配置</h3>
-              <ul class="lyra-frame__points">
-                <li>1ページ全体が見える構図</li>
-                <li>複数コマの一貫性</li>
-                <li>完成イメージが分かる状態</li>
-              </ul>
-              <p class="lyra-frame__file">generated-page-sample-01.png</p>
+          <div class="lyra-shot" aria-label="コマ編集画面のスクリーンショット枠">
+            <div class="lyra-shot__frame">
+              <div class="lyra-frame__topbar"><span></span><span></span><span></span></div>
+              <div class="lyra-shot__placeholder">
+                <p class="lyra-frame__eyebrow">Panel editor</p>
+                <p class="lyra-shot__hint">ここにスクリーンショットが入ります</p>
+                <ul class="lyra-frame__points">
+                  <li>コマごとの登場人物・表情・向き</li>
+                  <li>構図・ショット・アングル・背景</li>
+                  <li>セリフの話者・種別・位置</li>
+                </ul>
+                <p class="lyra-frame__file">panel-editor-ja.png</p>
+              </div>
             </div>
           </div>
 
           <div class="lyra-flow__copy">
             <span class="lyra-step">Step 06</span>
-            <h3>生成結果を見ることで、Lyra が何を完成させる SaaS かが分かる。</h3>
-            <p class="lyra-flow__lead">
-              ここで初めて、ユーザーは最終的に何が得られるのかを具体的に理解できます。
-            </p>
+            <h3>コマを編集して、見せ方を詰める。</h3>
+            <p class="lyra-flow__lead">画面ですること：コマごとに登場人物・構図・ショット・アングル・背景・セリフを調整します。</p>
             <p>
-              重要なのは、単発のイラストではなくページ全体が揃っていることです。
-              これが、Lyra を漫画制作支援 SaaS として認識してもらううえで最も重要なスクリーンショットになります。
+              コマ割りテンプレートも変更できます。セリフは話者・種別・位置を指定でき、ナレーションは話者なし、セリフ・思考・叫び・ささやきは話者が必要です。
+              コマ数を減らすテンプレートを選ぶと、後ろのコマが削除されます。
+            </p>
+            <p class="lyra-callout">
+              <span>注意</span>
+              すべての空欄を埋める必要はありません。重要な情報ほど具体的に書くと、生成結果が安定します。
             </p>
           </div>
         </article>
 
+        <!-- Step 07 -->
         <article class="lyra-flow">
-          <div class="lyra-frame" aria-label="Export screenshot placeholder">
-            <div class="lyra-frame__topbar">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <div class="lyra-frame__body">
-              <p class="lyra-frame__eyebrow">Export</p>
-              <h3 class="lyra-frame__title">書き出し画面を配置</h3>
-              <ul class="lyra-frame__points">
-                <li>PDF または画像出力</li>
-                <li>ページ単位 / 一括出力</li>
-                <li>完成後の利用方法が分かる状態</li>
-              </ul>
-              <p class="lyra-frame__file">export-dialog-ja.png</p>
+          <div class="lyra-shot" aria-label="生成済みページのスクリーンショット枠">
+            <div class="lyra-shot__frame">
+              <div class="lyra-frame__topbar"><span></span><span></span><span></span></div>
+              <div class="lyra-shot__placeholder">
+                <p class="lyra-frame__eyebrow">Generated page</p>
+                <p class="lyra-shot__hint">ここに完成ページのサンプルが入ります</p>
+                <ul class="lyra-frame__points">
+                  <li>1 ページ全体が見える構図</li>
+                  <li>複数コマでキャラが一貫している状態</li>
+                  <li>セリフが読める状態</li>
+                </ul>
+                <p class="lyra-frame__file">generated-page-sample-01.png</p>
+              </div>
             </div>
           </div>
 
           <div class="lyra-flow__copy">
             <span class="lyra-step">Step 07</span>
-            <h3>最後は書き出しまでつながっている。</h3>
-            <p class="lyra-flow__lead">
-              生成して終わりではなく、持ち出せる形にするところまでが製品体験です。
-            </p>
+            <h3>ページ画像を生成する。</h3>
+            <p class="lyra-flow__lead">画面ですること：現在の入力内容から、ページ画像を新しく生成します。</p>
             <p>
-              書き出し画面があることで、Lyra が実制作の終点まで面倒を見ていることが伝わります。
-              初めて見る人にも、プロトタイプではなく運用可能な SaaS だと理解してもらいやすくなります。
+              生成も再生成も、前の画像を編集するのではなく、その時点の設定から作り直します。確定済みリファレンスがあると、キャラの一貫性が安定しやすくなります。
+              生成には数十秒から数分かかることがあり、進み具合はジョブ状態（queued / processing / completed）で確認できます。生成後はページをダブルクリックで拡大できます。
+            </p>
+            <p class="lyra-callout">
+              <span>料金</span>
+              ページ生成は 3 クレジットから。参照キャラが 4 体以上のときは、4 体目以降 1 体ごとに 1 クレジット追加です。失敗したジョブは failed になり、返却対象は返却処理されます。
             </p>
           </div>
         </article>
+
+        <!-- Step 08 -->
+        <article class="lyra-flow lyra-flow--reverse">
+          <div class="lyra-shot" aria-label="書き出し画面のスクリーンショット枠">
+            <div class="lyra-shot__frame">
+              <div class="lyra-frame__topbar"><span></span><span></span><span></span></div>
+              <div class="lyra-shot__placeholder">
+                <p class="lyra-frame__eyebrow">Export</p>
+                <p class="lyra-shot__hint">ここにスクリーンショットが入ります</p>
+                <ul class="lyra-frame__points">
+                  <li>PDF / 画像の選択</li>
+                  <li>選択ページ保存 / 全ページ一括保存</li>
+                  <li>ファイル名の指定欄</li>
+                </ul>
+                <p class="lyra-frame__file">export-dialog-ja.png</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lyra-flow__copy">
+            <span class="lyra-step">Step 08</span>
+            <h3>PDF または画像で書き出す。</h3>
+            <p class="lyra-flow__lead">画面ですること：選択したページ、または全ページを PDF / 画像で保存します。</p>
+            <p>
+              全ページの一括保存にも対応します。複数画像で保存するとページごとにファイルが分かれ、画像を複数枚保存するとき以外はファイル名を指定できます。
+              ここまでで、構想から書き出しまでが一続きでつながります。
+            </p>
+          </div>
+        </article>
+
       </div>
     </section>
 
@@ -347,15 +439,18 @@
       <div class="section-heading">
         <p class="section-kicker">Pricing</p>
         <h2>料金とクレジットの考え方。</h2>
+        <p class="lyra-section__lead">
+          テキストを整える段階は無料です。画像生成やキャラクター参照の工程でクレジットを使います。
+        </p>
       </div>
 
       <div class="lyra-pricing">
         <article class="lyra-table-card">
-          <h3>サブスク / クレジット</h3>
+          <h3>プランと購入</h3>
           <table class="lyra-table">
             <thead>
               <tr>
-                <th>プラン</th>
+                <th>区分</th>
                 <th>内容</th>
                 <th>価格</th>
               </tr>
@@ -377,17 +472,17 @@
                 <td>3,500 円 / 月</td>
               </tr>
               <tr>
-                <td>追加 10cr</td>
+                <td>単発 10cr</td>
                 <td>10 クレジット</td>
                 <td>220 円</td>
               </tr>
               <tr>
-                <td>追加 50cr</td>
+                <td>単発 50cr</td>
                 <td>50 クレジット</td>
                 <td>1,100 円</td>
               </tr>
               <tr>
-                <td>追加 150cr</td>
+                <td>単発 150cr</td>
                 <td>150 クレジット</td>
                 <td>3,300 円</td>
               </tr>
@@ -410,11 +505,11 @@
                 <td>0 cr</td>
               </tr>
               <tr>
-                <td>ページ構成生成</td>
+                <td>ページ骨格生成</td>
                 <td>0 cr</td>
               </tr>
               <tr>
-                <td>キャラ画像読み込み</td>
+                <td>キャラ画像取り込み</td>
                 <td>1 cr</td>
               </tr>
               <tr>
@@ -422,48 +517,108 @@
                 <td>1 cr</td>
               </tr>
               <tr>
-                <td>ページ生成</td>
+                <td>ページ画像生成</td>
                 <td>3 cr から</td>
               </tr>
               <tr>
-                <td>既存キャラ 4 体超過</td>
+                <td>参照キャラ 4 体目以降</td>
                 <td>1 体ごとに +1 cr</td>
               </tr>
             </tbody>
           </table>
           <p class="lyra-note">
-            テキストを整える段階では料金がかからず、画像生成やキャラクター参照の工程でクレジットを使う設計です。
+            1 クレジットはサブスク基準で 20 円、単発購入は 1 クレジットあたり 22 円です。
+            料金・クレジット消費はリリース時点の設定で、変更する場合があります。
           </p>
         </article>
       </div>
 
       <div class="lyra-billing">
-        <div class="lyra-frame" aria-label="Billing screenshot placeholder">
-          <div class="lyra-frame__topbar">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="lyra-frame__body">
-            <p class="lyra-frame__eyebrow">Billing and credits</p>
-            <h3 class="lyra-frame__title">残高と購入導線が分かる画面を配置</h3>
-            <ul class="lyra-frame__points">
-              <li>現在のクレジット残高</li>
-              <li>プランと追加購入導線</li>
-              <li>料金体系が把握できる状態</li>
-            </ul>
-            <p class="lyra-frame__file">billing-credits-ja.png</p>
+        <div class="lyra-shot" aria-label="クレジット残高と購入画面のスクリーンショット枠">
+          <div class="lyra-shot__frame">
+            <div class="lyra-frame__topbar"><span></span><span></span><span></span></div>
+            <div class="lyra-shot__placeholder">
+              <p class="lyra-frame__eyebrow">Billing &amp; credits</p>
+              <p class="lyra-shot__hint">ここにスクリーンショットが入ります</p>
+              <ul class="lyra-frame__points">
+                <li>現在のクレジット残高</li>
+                <li>プランと追加購入の導線</li>
+                <li>サブスク / 単発購入の選択</li>
+              </ul>
+              <p class="lyra-frame__file">billing-credits-ja.png</p>
+            </div>
           </div>
         </div>
 
         <div class="lyra-billing__copy">
           <span class="lyra-step">Billing</span>
-          <h3>支払いの仕組みも、初見で迷わない形にする。</h3>
+          <h3>支払いが発生する場所を、最初に確認できる。</h3>
           <p>
-            料金表だけではなく、実際の課金画面も見せることで「どこで支払いが発生するのか」が理解しやすくなります。
-            初めてサービスを見る人にとって、価格の透明性は説明力の一部です。
+            料金表だけでなく、実際のクレジット画面で残高と購入導線を確認できます。
+            どの操作で何クレジット使うかが事前に分かるので、課金前に判断できます。
           </p>
         </div>
+      </div>
+    </section>
+
+    <section class="lyra-section" id="faq">
+      <div class="section-heading">
+        <p class="section-kicker">FAQ</p>
+        <h2>初めての方からよくある質問。</h2>
+      </div>
+
+      <div class="lyra-faq">
+        <details class="lyra-faq__item">
+          <summary>絵が描けなくても使えますか？</summary>
+          <p>はい。キャラクター設定やストーリーを入力して、AI と一緒に漫画ページを作れます。ただし、良い結果にするにはキャラ設定やコマ内容の確認・修正が必要です。</p>
+        </details>
+        <details class="lyra-faq__item">
+          <summary>プロンプトを書く必要はありますか？</summary>
+          <p>基本的には不要です。Lyra は GUI 入力・ストーリー・キャラリファレンスから内部プロンプトを組み立てます。必要なときだけ、自由記述で補足できます。</p>
+        </details>
+        <details class="lyra-faq__item">
+          <summary>キャラの見た目は安定しますか？</summary>
+          <p>確定済みリファレンス画像を使って安定性を高めます。ただし AI 生成の性質上、完全に同一になることは保証しません。</p>
+        </details>
+        <details class="lyra-faq__item">
+          <summary>生成にはどのくらい時間がかかりますか？</summary>
+          <p>画像生成は時間がかかる処理です。混雑状況やページ内容によって、数十秒から数分かかる場合があります。生成中に画面を閉じても、ジョブ状態から進み具合を確認できます。</p>
+        </details>
+        <details class="lyra-faq__item">
+          <summary>失敗したらクレジットはどうなりますか？</summary>
+          <p>生成ジョブが失敗した場合は、ジョブ履歴とクレジット履歴をもとに確認します。システム側で返却対象の失敗は、返却処理される設計です。</p>
+        </details>
+        <details class="lyra-faq__item">
+          <summary>作った画像は保存できますか？</summary>
+          <p>はい。選択ページまたは全ページを、PDF または画像形式で保存できます。</p>
+        </details>
+        <details class="lyra-faq__item">
+          <summary>日本語以外でも使えますか？</summary>
+          <p>日本語版と英語版の UI を切り替えられます。StoryAI や自動入力も、選択中の言語に合わせます。</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="lyra-section" id="safety">
+      <div class="section-heading">
+        <p class="section-kicker">Rights &amp; Safety</p>
+        <h2>権利と安全性について。</h2>
+      </div>
+
+      <div class="lyra-safety">
+        <article class="lyra-safety-card">
+          <h3>作品はあなたの制作資産</h3>
+          <p>作品・キャラクター・生成画像は、ユーザーの制作資産として扱います。認証と所有者確認により、他のユーザーから見えないようにします。</p>
+        </article>
+        <article class="lyra-safety-card">
+          <h3>決済とログイン</h3>
+          <p>決済は Stripe、ログインは認証基盤を利用する方針です。生成に失敗した場合は、ジョブ履歴とクレジット履歴から確認できる設計です。</p>
+        </article>
+        <article class="lyra-safety-card">
+          <h3>正式な規約は別ページに</h3>
+          <p>利用規約・プライバシーポリシー・特定商取引法に基づく表記は、別ページに用意します。料金や権利の詳細は、そちらの正式表記が優先されます。</p>
+          <a class="lyra-safety-card__link" href="tokushoho.html">特定商取引法に基づく表記を見る →</a>
+        </article>
       </div>
     </section>
   </main>

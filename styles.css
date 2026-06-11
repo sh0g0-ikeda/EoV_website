@@ -1195,7 +1195,8 @@ body[data-language="en"] .hero__lede {
 .lyra-hero__visual,
 .lyra-summary-card,
 .lyra-table-card,
-.lyra-frame,
+.lyra-shot__frame,
+.lyra-safety-card,
 .lyra-billing__copy {
   position: relative;
   overflow: hidden;
@@ -1212,7 +1213,8 @@ body[data-language="en"] .hero__lede {
 .lyra-hero__visual::before,
 .lyra-summary-card::before,
 .lyra-table-card::before,
-.lyra-frame::before,
+.lyra-shot__frame::before,
+.lyra-safety-card::before,
 .lyra-billing__copy::before {
   content: "";
   position: absolute;
@@ -1347,7 +1349,7 @@ body[data-language="en"] .hero__lede {
   grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr);
 }
 
-.lyra-flow--reverse .lyra-frame {
+.lyra-flow--reverse .lyra-shot {
   order: 2;
 }
 
@@ -1355,8 +1357,11 @@ body[data-language="en"] .hero__lede {
   order: 1;
 }
 
-.lyra-frame {
-  min-height: 100%;
+.lyra-shot {
+  position: relative;
+}
+
+.lyra-shot__frame {
   padding: 18px;
   background:
     radial-gradient(circle at 82% 18%, rgba(58, 123, 255, 0.18), transparent 24%),
@@ -1389,7 +1394,7 @@ body[data-language="en"] .hero__lede {
   background: rgba(125, 216, 120, 0.9);
 }
 
-.lyra-frame__body {
+.lyra-shot__placeholder {
   display: grid;
   align-content: center;
   min-height: 360px;
@@ -1399,6 +1404,14 @@ body[data-language="en"] .hero__lede {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent),
     rgba(3, 6, 13, 0.78);
+}
+
+.lyra-shot__hint {
+  margin: 6px 0 4px;
+  color: var(--text);
+  font-size: 1.18rem;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", "Times New Roman", serif;
+  line-height: 1.5;
 }
 
 .lyra-frame__title {
@@ -1472,6 +1485,212 @@ body[data-language="en"] .hero__lede {
   align-content: center;
 }
 
+/* Intro line under the hero copy */
+.lyra-meta {
+  max-width: 52ch;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.85;
+}
+
+/* Lead paragraph under a section heading */
+.lyra-section__lead {
+  max-width: 60ch;
+  margin: 4px auto 0;
+  color: rgba(234, 234, 240, 0.84);
+  font-size: 1.02rem;
+  line-height: 1.85;
+}
+
+/* Full-width console screenshot directly under the hero */
+.lyra-preview-band {
+  margin-top: 34px;
+}
+
+.lyra-shot--wide {
+  margin: 0;
+}
+
+.lyra-shot--wide .lyra-shot__placeholder {
+  min-height: clamp(240px, 38vw, 480px);
+}
+
+.lyra-shot--wide figcaption {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* Quick start checklist */
+.lyra-quickstart {
+  display: grid;
+  gap: 22px;
+}
+
+.lyra-quicklist {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  list-style: none;
+}
+
+.lyra-quicklist li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 18px 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent),
+    rgba(6, 10, 18, 0.72);
+}
+
+.lyra-quicknum {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  background: rgba(212, 175, 55, 0.1);
+  color: #f7e7a6;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.lyra-quicklist strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--text);
+  font-size: 1.06rem;
+}
+
+.lyra-quicklist p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.lyra-quickstart__note {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+/* Inline caution / pricing callout inside a flow step */
+.lyra-callout {
+  margin-top: 16px;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  border-left: 3px solid var(--gold);
+  background: rgba(212, 175, 55, 0.07);
+  color: rgba(234, 234, 240, 0.92);
+  font-size: 0.96rem;
+  line-height: 1.8;
+}
+
+.lyra-callout span {
+  display: inline-block;
+  margin-right: 8px;
+  color: #f7e7a6;
+  font-weight: 700;
+  font-size: 0.84rem;
+  letter-spacing: 0.06em;
+}
+
+/* FAQ accordion */
+.lyra-faq {
+  display: grid;
+  gap: 12px;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.lyra-faq__item {
+  padding: 4px 22px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent),
+    rgba(6, 10, 18, 0.72);
+}
+
+.lyra-faq__item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 0;
+  color: var(--text);
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.lyra-faq__item summary::-webkit-details-marker {
+  display: none;
+}
+
+.lyra-faq__item summary::after {
+  content: "+";
+  flex: none;
+  color: var(--gold);
+  font-size: 1.4rem;
+  line-height: 1;
+  transition: transform 200ms ease;
+}
+
+.lyra-faq__item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.lyra-faq__item p {
+  padding: 0 0 18px;
+  color: rgba(234, 234, 240, 0.86);
+  line-height: 1.9;
+}
+
+/* Rights & safety */
+.lyra-safety {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.lyra-safety-card {
+  padding: 26px;
+}
+
+.lyra-safety-card h3 {
+  margin: 0 0 12px;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", "Times New Roman", serif;
+  font-size: 1.32rem;
+  line-height: 1.4;
+}
+
+.lyra-safety-card p {
+  color: rgba(234, 234, 240, 0.86);
+  line-height: 1.85;
+}
+
+.lyra-safety-card__link {
+  display: inline-block;
+  margin-top: 14px;
+  color: #f7e7a6;
+  font-size: 0.94rem;
+}
+
+.lyra-safety-card__link:hover,
+.lyra-safety-card__link:focus-visible {
+  text-decoration: underline;
+}
+
 body[data-language="ja"] .site-nav a,
 body[data-language="ja"] .language-switch,
 body[data-language="ja"] .section-kicker,
@@ -1523,6 +1742,7 @@ body[data-language="ja"] .products__launch span {
 
   .hero__signal-grid,
   .lyra-summary,
+  .lyra-safety,
   .product-grid {
     grid-template-columns: 1fr;
   }
@@ -1532,7 +1752,7 @@ body[data-language="ja"] .products__launch span {
     grid-template-columns: 1fr;
   }
 
-  .lyra-flow--reverse .lyra-frame,
+  .lyra-flow--reverse .lyra-shot,
   .lyra-flow--reverse .lyra-flow__copy {
     order: initial;
   }
@@ -1675,6 +1895,7 @@ body[data-language="ja"] .products__launch span {
   .legal-card,
   .lyra-table-card,
   .lyra-summary-card,
+  .lyra-safety-card,
   .lyra-billing__copy,
   .lyra-hero__visual,
   .tech-panel,
@@ -1710,12 +1931,16 @@ body[data-language="ja"] .products__launch span {
     font-size: 0.95rem;
   }
 
-  .lyra-frame {
+  .lyra-quicklist {
+    grid-template-columns: 1fr;
+  }
+
+  .lyra-shot__frame {
     padding: 14px;
   }
 
-  .lyra-frame__body {
-    min-height: 300px;
+  .lyra-shot__placeholder {
+    min-height: 240px;
     padding: 18px;
   }
 
