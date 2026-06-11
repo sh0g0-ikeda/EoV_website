@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lyra | Edge of Vision</title>
+  <meta
+    name="description"
+    content="Lyra は、ストーリー・キャラクター・ページ構成を整理しながら、AI と一緒に漫画ページを作る制作支援ツールです。"
+  >
+  <link rel="icon" href="pictures/logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="lyra-page">
+  <div class="site-chrome"></div>
+
+  <header class="site-header legal-header" id="top">
+    <a class="brand-mark" href="index.html#home" aria-label="Edge of Vision home">
+      <img src="pictures/logo.png" alt="Edge of Vision logo">
+    </a>
+
+    <div class="header-actions">
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html#home">ホーム</a>
+        <a href="#features">機能</a>
+        <a href="#pricing">料金</a>
+        <a href="#screenshots">スクショ</a>
+        <a href="index.html#contact">連絡先</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="lyra-main">
+    <section class="lyra-hero">
+      <div class="lyra-hero__copy">
+        <p class="section-kicker">Manga Creation</p>
+        <h1>ストーリーから、漫画ページへ。</h1>
+        <p class="lyra-hero__body">
+          Lyra は、作品設定・キャラクター・話の流れを整理しながら、
+          ページ骨格と漫画画像を生成できる制作支援ツールです。
+          プロンプトを書くより、作品の中身を整理して漫画化することに集中できます。
+        </p>
+        <div class="lyra-hero__actions">
+          <a class="button button--primary" href="#screenshots">必要なスクショを見る</a>
+          <a class="button button--secondary" href="#pricing">料金を見る</a>
+        </div>
+        <ul class="lyra-pills" aria-label="Lyra highlights">
+          <li>日本語・英語制作対応</li>
+          <li>テキスト AI は無料</li>
+          <li>画像生成はクレジット制</li>
+        </ul>
+      </div>
+
+      <div class="lyra-hero__visual">
+        <div class="lyra-mark">
+          <img class="lyra-mark__icon" src="logo.png" alt="Lyra logo">
+          <div class="lyra-mark__text">
+            <p class="lyra-mark__name">Lyra</p>
+            <p class="lyra-mark__sub">Development by Edge of Vision</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lyra-section" id="features">
+      <div class="section-heading">
+        <p class="section-kicker">Workflow</p>
+        <h2>制作の流れに沿って使える。</h2>
+      </div>
+
+      <div class="lyra-grid lyra-grid--three">
+        <article class="lyra-card">
+          <span class="lyra-card__step">01</span>
+          <h3>作品を作る</h3>
+          <p>タイトル、ジャンル、世界観、テーマ、章と話を整理して作品全体を管理します。</p>
+        </article>
+        <article class="lyra-card">
+          <span class="lyra-card__step">02</span>
+          <h3>StoryAI で整える</h3>
+          <p>現在の話と他の章の内容を踏まえて、矛盾を抑えながらストーリーを改善します。テキスト AI はクレジットを消費しません。</p>
+        </article>
+        <article class="lyra-card">
+          <span class="lyra-card__step">03</span>
+          <h3>キャラクターを登録する</h3>
+          <p>名前、自由記述、見た目、別名、再現アンカーを設定し、ページ生成で使うリファレンス画像を確定します。</p>
+        </article>
+        <article class="lyra-card">
+          <span class="lyra-card__step">04</span>
+          <h3>ページ骨格を作る</h3>
+          <p>話の内容をページ数へ分散し、各ページの目的、コマ数、連続性メモ、セリフのたたき台をまとめます。</p>
+        </article>
+        <article class="lyra-card">
+          <span class="lyra-card__step">05</span>
+          <h3>コマを編集する</h3>
+          <p>登場人物、構図、ショット、アングル、背景、セリフをページ単位で調整してから生成に進みます。</p>
+        </article>
+        <article class="lyra-card">
+          <span class="lyra-card__step">06</span>
+          <h3>ページ画像を生成する</h3>
+          <p>現在の設定から新規に漫画ページを生成します。生成後は拡大確認し、必要に応じて再生成できます。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="lyra-section">
+      <div class="section-heading">
+        <p class="section-kicker">Use Case</p>
+        <h2>はじめての使い方。</h2>
+      </div>
+
+      <div class="lyra-checklist">
+        <div class="lyra-checklist__column">
+          <ol>
+            <li>作品を作成する</li>
+            <li>章と話を作成する</li>
+            <li>ストーリーを入力する</li>
+            <li>キャラを作成する</li>
+            <li>リファレンス画像を確定する</li>
+          </ol>
+        </div>
+        <div class="lyra-checklist__column">
+          <ol start="6">
+            <li>ページ骨格を生成する</li>
+            <li>コマ内容を調整する</li>
+            <li>ページ画像を生成する</li>
+            <li>必要に応じて再生成する</li>
+            <li>PDF または画像で保存する</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="lyra-section" id="pricing">
+      <div class="section-heading">
+        <p class="section-kicker">Pricing</p>
+        <h2>料金とクレジット。</h2>
+      </div>
+
+      <div class="lyra-pricing">
+        <article class="lyra-table-card">
+          <h3>サブスク / 単発</h3>
+          <table class="lyra-table">
+            <thead>
+              <tr>
+                <th>区分</th>
+                <th>内容</th>
+                <th>価格</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>無料お試し</td>
+                <td>初回 12 クレジット</td>
+                <td>0 円</td>
+              </tr>
+              <tr>
+                <td>Standard</td>
+                <td>50 クレジット/月</td>
+                <td>1,000 円/月</td>
+              </tr>
+              <tr>
+                <td>Premium</td>
+                <td>175 クレジット/月</td>
+                <td>3,500 円/月</td>
+              </tr>
+              <tr>
+                <td>単発 10cr</td>
+                <td>10 クレジット</td>
+                <td>220 円</td>
+              </tr>
+              <tr>
+                <td>単発 50cr</td>
+                <td>50 クレジット</td>
+                <td>1,100 円</td>
+              </tr>
+              <tr>
+                <td>単発 150cr</td>
+                <td>150 クレジット</td>
+                <td>3,300 円</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+
+        <article class="lyra-table-card">
+          <h3>クレジット消費</h3>
+          <table class="lyra-table">
+            <thead>
+              <tr>
+                <th>操作</th>
+                <th>消費</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>StoryAI / テキスト改善</td>
+                <td>0 cr</td>
+              </tr>
+              <tr>
+                <td>ページ骨格生成</td>
+                <td>0 cr</td>
+              </tr>
+              <tr>
+                <td>キャラ画像取り込み</td>
+                <td>1 cr</td>
+              </tr>
+              <tr>
+                <td>キャラプレビュー生成</td>
+                <td>1 cr</td>
+              </tr>
+              <tr>
+                <td>ページ画像生成</td>
+                <td>3 cr から</td>
+              </tr>
+              <tr>
+                <td>参照キャラ 4 体目以降</td>
+                <td>1 体ごとに +1 cr</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="lyra-note">料金・クレジット消費はリリース時点の想定です。変更する場合があります。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="lyra-section" id="screenshots">
+      <div class="section-heading">
+        <p class="section-kicker">Shots</p>
+        <h2>必要な Lyra スクリーンショット。</h2>
+      </div>
+
+      <div class="lyra-grid lyra-grid--two">
+        <article class="lyra-shot">
+          <h3>1. ヒーロー画像</h3>
+          <p>制作コンソール全体。左に作品 / ストーリー、中央に編集画面、右にジョブやクレジットが見える構図。</p>
+          <p class="lyra-shot__file">推奨: <code>hero-console-ja.png</code></p>
+        </article>
+        <article class="lyra-shot">
+          <h3>2. ストーリー入力画面</h3>
+          <p>分割入力または全体入力の切替、StoryAI 指示欄、改善結果が見える状態。</p>
+          <p class="lyra-shot__file">推奨: <code>story-ai-improve-ja.png</code></p>
+        </article>
+        <article class="lyra-shot">
+          <h3>3. キャラクター編集画面</h3>
+          <p>名前、自由記述、GUI 項目、別名、再現アンカーが見える状態。</p>
+          <p class="lyra-shot__file">推奨: <code>character-editor-ja.png</code></p>
+        </article>
+        <article class="lyra-shot">
+          <h3>4. キャラリファレンス画面</h3>
+          <p>生成プレビューと確定済みリファレンス画像が並んで見える状態。</p>
+          <p class="lyra-shot__file">推奨: <code>character-reference-confirm-ja.png</code></p>
+        </article>
+        <article class="lyra-shot">
+          <h3>5. ページ骨格生成後</h3>
+          <p>複数ページと各コマの状況、登場人物、構図、セリフが自動入力されている状態。</p>
+          <p class="lyra-shot__file">推奨: <code>page-plan-generated-ja.png</code></p>
+        </article>
+        <article class="lyra-shot">
+          <h3>6. コマ編集画面</h3>
+          <p>登場人物、構図、ショット、アングル、背景、セリフを調整している状態。</p>
+          <p class="lyra-shot__file">推奨: <code>panel-editor-ja.png</code></p>
+        </article>
+        <article class="lyra-shot">
+          <h3>7. 生成済みページ画像</h3>
+          <p>完成に近い漫画ページ 1 枚。セリフが読めて、ページ全体が見えるもの。</p>
+          <p class="lyra-shot__file">推奨: <code>generated-page-sample-01.png</code></p>
+        </article>
+        <article class="lyra-shot">
+          <h3>8. エクスポート画面</h3>
+          <p>PDF / 画像、選択保存 / 一括保存の UI が見える状態。</p>
+          <p class="lyra-shot__file">推奨: <code>export-dialog-ja.png</code></p>
+        </article>
+        <article class="lyra-shot">
+          <h3>9. 料金・クレジット画面</h3>
+          <p>残高、購入導線、サブスク / 単発購入導線が分かる状態。</p>
+          <p class="lyra-shot__file">推奨: <code>billing-credits-ja.png</code></p>
+        </article>
+      </div>
+
+      <div class="lyra-callout">
+        <h3>撮影ルール</h3>
+        <ul>
+          <li>架空の作品、架空のキャラクターで撮影する</li>
+          <li>ユーザー名、メールアドレス、内部 ID、エラー詳細は映さない</li>
+          <li>fallback preview、failed job、localhost 表示は使わない</li>
+          <li>日本語 UI を基本にし、英語 UI は比較用ショットだけにする</li>
+          <li>横長 16:9、縦長 4:5、スマホ用 9:16 を用意する</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="lyra-section">
+      <div class="section-heading">
+        <p class="section-kicker">FAQ</p>
+        <h2>よくある質問。</h2>
+      </div>
+
+      <div class="lyra-faq">
+        <article class="lyra-faq__item">
+          <h3>絵が描けなくても使えますか？</h3>
+          <p>はい。キャラクター設定やストーリーを入力して、AI と一緒に漫画ページを作れます。ただし、良い結果にするにはキャラ設定やコマ内容の確認・修正が必要です。</p>
+        </article>
+        <article class="lyra-faq__item">
+          <h3>プロンプトを書く必要はありますか？</h3>
+          <p>基本的には不要です。Lyra は GUI 入力、ストーリー、キャラリファレンスから内部プロンプトを組み立てます。必要な場合だけ自由記述で補足できます。</p>
+        </article>
+        <article class="lyra-faq__item">
+          <h3>キャラの見た目は安定しますか？</h3>
+          <p>確定済みリファレンス画像を使って安定性を高めます。ただし AI 生成の性質上、完全に同一になることは保証しません。</p>
+        </article>
+        <article class="lyra-faq__item">
+          <h3>生成にはどのくらい時間がかかりますか？</h3>
+          <p>画像生成は時間がかかる処理です。混雑状況やページ内容によって、数十秒から数分かかる場合があります。</p>
+        </article>
+        <article class="lyra-faq__item">
+          <h3>作った画像は保存できますか？</h3>
+          <p>はい。選択ページまたは全ページを、PDF または画像形式で保存できます。</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer legal-footer">
+    <div class="footer-brand">
+      <img class="footer-brand__wordmark" src="pictures/text_yellow.png" alt="Edge of Vision">
+    </div>
+
+    <div class="footer-column">
+      <h3>サイト</h3>
+      <a href="index.html#home">ホーム</a>
+      <a href="index.html#products">プロダクト</a>
+      <a href="tokushoho.html">特定商取引法に基づく表記</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>連絡先</h3>
+      <a href="mailto:edge.of.vision.official@gmail.com">edge.of.vision.official@gmail.com</a>
+      <a href="#top">上に戻る</a>
+    </div>
+  </footer>
+</body>
+</html>

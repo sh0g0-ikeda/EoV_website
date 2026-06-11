@@ -45,6 +45,7 @@ const translations = {
     product2Tag1: "マンガ生成",
     product2Tag2: "構成支援",
     product2Tag3: "スタイル制御",
+    product2Link: "詳細ページへ",
     product3Status: "構想中",
     product3Title: "The Council",
     product3Body:
@@ -134,6 +135,7 @@ const translations = {
     product2Tag1: "Manga generation",
     product2Tag2: "Structure support",
     product2Tag3: "Style control",
+    product2Link: "View details",
     product3Status: "Concept phase",
     product3Title: "The Council",
     product3Body:
